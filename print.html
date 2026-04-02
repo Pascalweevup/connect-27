@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fromont Briens — Séminaire 2026 — Comparateur Budget</title>
+    <title>SBS Sales Conference 2027 — Comparateur Budget</title>
     <meta name="description" content="Comparateur interactif de propositions séminaire Fromont Briens 2026">
 
     <!-- Tailwind CSS via CDN -->
@@ -83,155 +83,154 @@
 
         // --- DATA EXTRACTED FROM PDFs V2 ---
         const budgetData = {
-            palma: {
-                id: 'palma',
-                name: "Palma de Majorque",
-                totalTTC: 75650.89,
-                totalHT: 63110.17,
-                honorairesHT: 5938.63,
+            athens: {
+                id: 'athens',
+                name: "Athens",
+                totalTTC: 580631.22 * 1.2,
+                totalHT: 580631.22,
+                honorairesHT: 55118.64,
                 categories: {
-                    hotellerie: 15532.92,
-                    restauration: 10829.50,
-                    activites: 4997.18,
-                    transport: 18128.94,
-                    rse: 0.00,
-                    accompagnement: 7683.00
+                    venue: 343826.28,
+                    fnb: 84891.00,
+                    tech_staff: 53325.50,
+                    scenography: 1512.50,
+                    project_team: 20011.60,
+                    other: 21945.70
                 },
                 details: {
-                    hotellerie: [
-                        { desc: "Chambre d'hôtel single B&B", price: 7349.96, subDesc: "Hôtel Artmadams\nDeux nuitées pour 21 personnes (21 chambres)" },
-                        { desc: "Chambre d'hôtel twin B&B", price: 7819.97, subDesc: "Hôtel Artmadams\nDeux nuitées pour 34 personnes (17 chambres)" },
-                        { desc: "Taxe de séjour", price: 363.00, subDesc: "Pour 2 nuitées" }
+                    venue: [
+                        { desc: "Hotel Rooms (Single Rooms)", price: 193545.00, subDesc: "Essential rooms\nBreakfast included" },
+                        { desc: "Resilience tax for climate change", price: 6000.00 },
+                        { desc: "Delegates Day Rates", price: 122604.00, subDesc: "Rental of the main meeting room\nMorning Coffee break with cookies and cupcakes\nBusiness lunch buffet with refreshments\nAfternoon coffee break with Greek and French pastries\nFlip chart, pad, pencil, mint, mineral water" },
+                        { desc: "Break out Rooms - 50 pax", price: 13548.32, subDesc: "Vergina\nIlissos\nHorizon\nAthens View" },
+                        { desc: "Break out Rooms - 50 pax", price: 6096.72, subDesc: "Pella\nMycenae" },
+                        { desc: "Boardroom - 6 pax", price: 2032.24, subDesc: "Lobby suite" }
                     ],
-                    restauration: [
-                        { desc: "Dîner J1 - Patron Lunares", price: 2722.50, subDesc: "Entrée - plat - dessert - eaux - vins" },
-                        { desc: "Déjeuner J2 - repas Casa Esment", price: 2178.00, subDesc: "Tapas à partager - desserts - eaux - cafés / thés" },
-                        { desc: "Déjeuner J2 - boissons Casa Esment", price: 605.00, subDesc: "Softs - Vins écologiques 1 bouteille pour 4 personnes" },
-                        { desc: "Dîner J2 - repas Cuit", price: 2783.00, subDesc: "Entrée - plat - dessert - eaux - vins - café" },
-                        { desc: "Dîner J2 - boissons Cuit", price: 363.00, subDesc: "Softs - bières (Option)" },
-                        { desc: "Déjeuner J3 - ArtMadams", price: 2541.00, subDesc: "Entrée - plat - dessert - eaux - café - thé - vins" }
+                    fnb: [
+                        { desc: "Day 1 Dinner including drinks", price: 22779.00, subDesc: "Dinner for 300 people in the Ilissos room\n3-course menu\nStill waters, sparkling water and hot drinks\nWines: Selection of White and Red Wine\nBeer: Assorted local and international beers" },
+                        { desc: "Day 2 Dinner including drinks", price: 22779.00, subDesc: "Dinner for 300 people in the Ilissos room\n3-course menu\nStill waters, sparkling water and hot drinks\nWines: Selection of White and Red Wine\nBeer: Assorted local and international beers" },
+                        { desc: "Gala evening - Menu Option A", price: 28050.00, subDesc: "Appetizer & Canapé\nStarter\nMain dish\nDessert\nMignardises\nCoffee" },
+                        { desc: "F&B - Beverage package", price: 3300.00, subDesc: "Welcome drink & open Bar with wine, beer, soft drinks and water during the meal" },
+                        { desc: "F&B - Full Open Bar for 2 hours", price: 7983.00, subDesc: "Whisky, Vodka, Gin, Rum, Tequila" }
                     ],
-                    activites: [
-                        { desc: "Team building RSE", price: 2299.00, subDesc: "Atelier d'agriculture écologique" },
-                        { desc: "Activité culturelle", price: 2698.18, subDesc: "Découverte de la ville à vélo avec un itinéraire et des guides" },
-                        { desc: "Activité culturelle : challenge photo (Option)", price: 0.00, subDesc: "En attente de devis" }
+                    tech_staff: [
+                        { desc: "Technical production - Plenary & Breakout Rooms", price: 43543.50, subDesc: "Plenary room\nStage & Furniture\nBreakout rooms\nKick-Off" },
+                        { desc: "Gala evening - Technical package + DJ", price: 4400.00, subDesc: "Stage\nVideo & sound & Light\nTechnicians on site" },
+                        { desc: "Photographer & Videographer", price: 1452.00, subDesc: "Photo & Video Coverage\nDelivery of 2-3 min clip" },
+                        { desc: "Animation - Welcome Hostess + cloakroom", price: 1430.00 },
+                        { desc: "Animation - Key Royale Music duet", price: 1900.00 },
+                        { desc: "Staff - Security", price: 600.00, subDesc: "3 security officers" }
                     ],
-                    transport: [
-                        { desc: "Billets d'avion Lyon - Palma de Majorque", price: 8369.40, subDesc: "Sous réserve de disponibilité et de l'évolution du tarif\nBagage à main et cabine uniquement" },
-                        { desc: "Frais d'émission des billets Lyon", price: 708.18, subDesc: "Aller-retour" },
-                        { desc: "Billets d'avion Paris Orly - Palma de Majorque", price: 6130.80, subDesc: "Sous réserve de disponibilité et de l'évolution du tarif\nBagage à main et cabine uniquement" },
-                        { desc: "Frais d'émission des billets Paris", price: 518.76, subDesc: "Aller-retour" },
-                        { desc: "Temps homme gestion des transports", price: 600.00 },
-                        { desc: "Transferts", price: 1801.80, subDesc: "Aller-retour pour l'aéroport et le team building" }
+                    scenography: [
+                        { desc: "Photocall in the hotel", price: 396.00, subDesc: "3mx2m" },
+                        { desc: "Signage", price: 720.50, subDesc: "10 posters A1\n2 Roll ups" },
+                        { desc: "Photocall for the gala dinner", price: 396.00, subDesc: "3mx2m" }
                     ],
-                    rse: [
-                        { desc: "Goodies passeport RSE (Option)", price: 495.00 },
-                        { desc: "Crayons à planter (Option)", price: 181.50 },
-                        { desc: "Tampons passeport (Option)", price: 48.84, subDesc: "Monture en bois" },
-                        { desc: "Création graphique (Option)", price: 200.00 },
-                        { desc: "Bilan carbone (Option)", price: 1800.00 }
+                    project_team: [
+                        { desc: "4 weevers on site", price: 16400.00 },
+                        { desc: "VHR + Catering + Rooms + Flights", price: 3531.60 },
+                        { desc: "Resilience tax for climate change", price: 80.00 }
                     ],
-                    accompagnement: [
-                        { desc: "Temps homme Weever", price: 6000.00, subDesc: "Présence de 2 Weevers sur votre événement\nForfait jour avant minuit : 900€\nForfait jour dimanche avant minuit : 1 200€" },
-                        { desc: "VHR - Hébergement", price: 550.00 },
-                        { desc: "VHR - Transport", price: 858.00 },
-                        { desc: "VHR - Restauration", price: 275.00, subDesc: "5 repas" }
+                    other: [
+                        { desc: "Goodies - Calendar to plant", price: 1080.00 },
+                        { desc: "Gala evening - Transport to venue", price: 2442.00, subDesc: "6 bus x 50 seats" },
+                        { desc: "Photobooth", price: 660.00 },
+                        { desc: "15 Customized awards", price: 466.20 },
+                        { desc: "Team building - Greek Quest", price: 17050.00 },
+                        { desc: "Gift for the winning team", price: 247.50, subDesc: "Organik Greek olive oil soaps" }
                     ]
                 }
             },
-            casablanca: {
-                id: 'casablanca',
-                name: "Casablanca",
-                totalTTC: 82473.48,
-                totalHT: 68727.90,
-                honorairesHT: 6560.26,
+            malta: {
+                id: 'malta',
+                name: "Malta",
+                totalTTC: 487354.88 * 1.2,
+                totalHT: 487354.88,
+                honorairesHT: 47870.78,
                 categories: {
-                    hotellerie: 12849.03,
-                    restauration: 10053.56,
-                    activites: 7468.17,
-                    transport: 23172.29,
-                    frais_annexes: 1125.77,
-                    rse: 0.00,
-                    accompagnement: 7498.82
+                    venue: 308420.40,
+                    fnb: 56850.00,
+                    tech_staff: 40226.25,
+                    scenography: 1512.50,
+                    project_team: 19876.00,
+                    other: 12598.95
                 },
                 details: {
-                    hotellerie: [
-                        { desc: "Chambre standard single B&B", price: 6630.16, subDesc: "Hôtel Hyatt Regency\nDeux nuitées pour 21 personnes (21 chambres)\nTaxe de séjour inclus" },
-                        { desc: "Chambre standard twin B&B", price: 6218.87, subDesc: "Hôtel Hyatt Regency\nDeux nuitées pour 34 personnes (17 chambres)\nTaxe de séjour inclus" }
+                    venue: [
+                        { desc: "Hotel Rooms (Single Rooms)", price: 217290.00, subDesc: "Superior room\nBreakfast included" },
+                        { desc: "Eco Tax", price: 2250.00 },
+                        { desc: "Plenary Room rental fees", price: 1334.75, subDesc: "Set-up and installation" },
+                        { desc: "Delegates Day Rates", price: 80088.00, subDesc: "DDR Package Full day" },
+                        { desc: "Breakout Rooms - 2nd floor", price: 1779.68, subDesc: "3 breakout rooms" },
+                        { desc: "Breakout Rooms - 7th floor", price: 2135.60, subDesc: "3 breakout rooms" },
+                        { desc: "Gala Evening Venue - Montekristo Estate", price: 3542.37, subDesc: "The Renaissance Hall" }
                     ],
-                    restauration: [
-                        { desc: "Dîner J1 - Braise", price: 2124.76, subDesc: "Dîner buffet incluant les boissons softs" },
-                        { desc: "Dîner J1 - Braise boissons alcoolisées", price: 403.70, subDesc: "9 bouteilles soit 1 verre de vin par personne" },
-                        { desc: "Soirée J1 - Bliss Rooftop (Option)", price: 1510.08, subDesc: "Forfait open bar premium 1h00\nJus de fruits, eaux minérales, sodas, bière, vin blanc et rouge, café et thé\nLa deuxième heure d'open bar à 22,42 €" },
-                        { desc: "Déjeuner J2 - La Sqala", price: 2359.50, subDesc: "Déjeuner incluant les boissons softs" },
-                        { desc: "Dîner J2 - Restaurant Dar Dada", price: 3082.20, subDesc: "Menu à partager et boissons softs" },
-                        { desc: "Dîner J2 - Dar Dada boissons alcoolisées", price: 1148.40, subDesc: "Forfait vin ou bière" },
-                        { desc: "Soirée J2 - Dar Beida (Option)", price: 0.00, subDesc: "Show typique marocain - en attente de devis" },
-                        { desc: "Déjeuner J3 - French Brassery", price: 935.00, subDesc: "Déjeuner au sein de l'hôtel incluant un verre de vin pour les parisiens" }
+                    fnb: [
+                        { desc: "Day 1 Welcome reception", price: 8898.00, subDesc: "Various culinary stations" },
+                        { desc: "Day 1 Beverage package", price: 5073.00 },
+                        { desc: "Day 2 Dinner set Menu", price: 12075.00 },
+                        { desc: "Day 2 Beverage package", price: 5073.00 },
+                        { desc: "Gala Evening - 4 courses Gala Menu", price: 20976.00 },
+                        { desc: "F&B - Welcome drink Prosecco", price: 1398.00 },
+                        { desc: "F&B - 4h Open Bar", price: 3357.00 }
                     ],
-                    activites: [
-                        { desc: "Guides 1/2 journée", price: 660.00, subDesc: "Guides local sur une demi journée pour vous faire visiter l'Ancienne Médina" },
-                        { desc: "Visite Mosquée Hassan II", price: 781.06, subDesc: "Avec un guide" },
-                        { desc: "Team-building : Bike builders", price: 6027.12, subDesc: "1 vélo par équipe de maximum 8 personnes\nDJ & sonorisation\nAnimateurs" },
-                        { desc: "Team-building : Plantation d'arbre (Option)", price: 5764.00, subDesc: "Gestion complète d'une activité environnementale à Casablanca pour 55 participants, comprenant la plantation d'arbres avec un centre éducatif pour la jeunesse, en collaboration avec des partenaires et lieux interculturels." }
+                    tech_staff: [
+                        { desc: "Technical production", price: 19065.00, subDesc: "Plenary & Breakout rooms" },
+                        { desc: "Scenography - Plenary Room", price: 7796.25, subDesc: "Panelled Shard Backdrop + Logo signage" },
+                        { desc: "Interpretation via IA - Acolad.", price: 2629.00 },
+                        { desc: "Gala Evening - Staff", price: 1072.50, subDesc: "Hostess & Security" },
+                        { desc: "Technique + DJ", price: 8211.50, subDesc: "Awards ceremony technique" },
+                        { desc: "Photographer & Videographer", price: 1452.00, subDesc: "Photo & Video Coverage" }
                     ],
-                    transport: [
-                        { desc: "Billets d'avion Lyon - Casablanca", price: 13935.53, subDesc: "Aller - Départ : 12h50 - Arrivée : 14h40\nRetour - Départ : 14h55 - Arrivée : 18h40\nSous réserve de disponibilité et de l'évolution du tarif\nBagage à main et cabine" },
-                        { desc: "Frais d'émission des billets Lyon", price: 1179.16 },
-                        { desc: "Billets d'avion Paris Orly - Casablanca", price: 6318.00, subDesc: "Aller départ : 14h40 - Arrivée : 16h50\nRetour départ : 16h55 - Arrivée : 20h55\nSous réserve de disponibilité et de l'évolution du tarif\nBagage à main et cabine" },
-                        { desc: "Frais d'émission des billets Paris", price: 534.60 },
-                        { desc: "Temps homme gestion des transports", price: 600.00 },
-                        { desc: "Transferts train aller", price: 302.50 },
-                        { desc: "Transferts train retour", price: 302.50 }
+                    scenography: [
+                        { desc: "Photocall in the hotel", price: 396.00, subDesc: "3mx2m" },
+                        { desc: "Signage", price: 720.50, subDesc: "10 posters A1\n2 Roll ups" },
+                        { desc: "Gala evening Photocall", price: 396.00, subDesc: "3mx2m" }
                     ],
-                    frais_annexes: [
-                        { desc: "Frais de conversion", price: 1125.77, subDesc: "1,5% du montant total HT de la prestation" }
+                    project_team: [
+                        { desc: "4 weevers on site", price: 16400.00 },
+                        { desc: "VHR + Catering + Rooms + Flights", price: 3446.00 },
+                        { desc: "Eco Tax", price: 30.00 }
                     ],
-                    rse: [
-                        { desc: "Goodies passeport RSE (Option)", price: 495.00 },
-                        { desc: "Crayons à planter (Option)", price: 181.50 },
-                        { desc: "Tampons passeport (Option)", price: 48.11, subDesc: "Monture en bois" },
-                        { desc: "Création graphique (Option)", price: 200.00 },
-                        { desc: "Bilan carbone (Option)", price: 1800.00 }
-                    ],
-                    accompagnement: [
-                        { desc: "Temps homme Weever", price: 6000.00, subDesc: "Présence de 2 Weevers sur votre événement\nForfait jour avant minuit : 900€\nForfait jour dimanche avant minuit : 1 200€" },
-                        { desc: "VHR - Hébergement", price: 365.82 },
-                        { desc: "VHR - Transport", price: 858.00 },
-                        { desc: "VHR - Restauration", price: 275.00, subDesc: "5 repas" }
+                    other: [
+                        { desc: "Goodies - Calendar to plant", price: 1080.00 },
+                        { desc: "Gala evening Transport", price: 2000.00, subDesc: "6 bus x 53 seats" },
+                        { desc: "Animation - Welcome Knighting theme", price: 918.50 },
+                        { desc: "Animation - Maltese Folklore Dancers", price: 390.50 },
+                        { desc: "Photobooth - Vintage Retro Booth", price: 764.50 },
+                        { desc: "15 Customized awards", price: 466.20 },
+                        { desc: "Team Building - Build a Hamper", price: 6740.00 },
+                        { desc: "Gift for the winning team", price: 239.25, subDesc: "Pack Extra virgin Olive oil and vinegar" }
                     ]
                 }
             }
         };
 
         const categoryLabels = {
-            hotellerie: "Hôtellerie",
-            restauration: "Restauration",
-            activites: "Activités",
-            transport: "Transport",
-            frais_annexes: "Frais Annexes",
-            rse: "RSE",
-            accompagnement: "Accompagnement (Weever)"
+            venue: "Venue",
+            fnb: "Food & Beverages",
+            tech_staff: "Tech & Staff",
+            scenography: "Scenography/Furniture",
+            project_team: "Project Team",
+            other: "Other"
         };
 
         const categoryColors = {
-            hotellerie: "bg-blue-500",
-            restauration: "bg-orange-500",
-            activites: "bg-purple-500",
-            transport: "bg-slate-500",
-            frais_annexes: "bg-amber-500",
-            rse: "bg-emerald-500",
-            accompagnement: "bg-teal-500"
+            venue: "bg-blue-500",
+            fnb: "bg-orange-500",
+            tech_staff: "bg-purple-500",
+            scenography: "bg-slate-500",
+            project_team: "bg-teal-500",
+            other: "bg-amber-500"
         };
 
         const textColors = {
-            hotellerie: "text-blue-500",
-            restauration: "text-orange-500",
-            activites: "text-purple-500",
-            transport: "text-slate-500",
-            frais_annexes: "text-amber-500",
-            rse: "text-emerald-500",
-            accompagnement: "text-teal-500"
+            venue: "text-blue-500",
+            fnb: "text-orange-500",
+            tech_staff: "text-purple-500",
+            scenography: "text-slate-500",
+            project_team: "text-teal-500",
+            other: "text-amber-500"
         };
 
         // --- UTILS ---
@@ -325,8 +324,9 @@
                                 <thead className="bg-gray-50">
                                     <tr>
                                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Poste de Dépense (HT)</th>
-                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Palma de Majorque</th>
-                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Casablanca</th>
+                                        {venues.map(v => (
+                                            <th key={v.id} className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">{v.name}</th>
+                                        ))}
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
@@ -519,7 +519,7 @@
                     <div style={{ pageBreakAfter: 'always', paddingBottom: '20px' }}>
                         <header className="bg-white shadow-sm border-b border-gray-200 mb-8 p-4">
                             <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                                <span className="text-yellow-500">☀️</span> Fromont Briens — Séminaire 2026
+                                <span className="text-yellow-500">☀️</span> SBS Sales Conference 2027
                             </h1>
                             <p className="text-sm text-gray-500">Comparateur interactif de propositions événementielles</p>
                         </header>
