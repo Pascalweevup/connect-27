@@ -69,11 +69,10 @@
     <script type="text/babel">
         const { useState } = React;
 
-        // --- DATA EXTRACTED FROM PDFs V2 ---
         const budgetData = {
             athens: {
                 id: 'athens',
-                name: "Athens",
+                name: "Athènes",
                 totalTTC: 580631.22 * 1.2,
                 totalHT: 580631.22,
                 honorairesHT: 55118.64,
@@ -87,51 +86,51 @@
                 },
                 details: {
                     venue: [
-                        { desc: "Hotel Rooms (Single Rooms)", price: 193545.00, subDesc: "Essential rooms\nBreakfast included" },
-                        { desc: "Resilience tax for climate change", price: 6000.00 },
-                        { desc: "Delegates Day Rates", price: 122604.00, subDesc: "Rental of the main meeting room\nMorning Coffee break with cookies and cupcakes\nBusiness lunch buffet with refreshments\nAfternoon coffee break with Greek and French pastries\nFlip chart, pad, pencil, mint, mineral water" },
-                        { desc: "Break out Rooms - 50 pax", price: 13548.32, subDesc: "Vergina\nIlissos\nHorizon\nAthens View" },
-                        { desc: "Break out Rooms - 50 pax", price: 6096.72, subDesc: "Pella\nMycenae" },
-                        { desc: "Boardroom - 6 pax", price: 2032.24, subDesc: "Lobby suite" }
+                        { desc: "Chambres d'hôtel (Single)", price: 193545.00, subDesc: "Chambres essentielles\nPetit-déjeuner inclus" },
+                        { desc: "Taxe de séjour (Résilience climatique)", price: 6000.00 },
+                        { desc: "Forfait Journée d'Étude", price: 122604.00, subDesc: "Location salle plénière\nPause café matin (cookies/cupcakes)\nDéjeuner d'affaires buffet avec rafraîchissements\nPause café après-midi (pâtisseries grecques/françaises)\nPaperboard, bloc-notes, crayons, menthes, eau minérale" },
+                        { desc: "Salles de sous-commission - 50 pax", price: 13548.32, subDesc: "Vergina\nIlissos\nHorizon\nAthens View" },
+                        { desc: "Salles de sous-commission - 50 pax", price: 6096.72, subDesc: "Pella\nMycenae" },
+                        { desc: "Salle de réunion - 6 pax", price: 2032.24, subDesc: "Suite Lobby" }
                     ],
                     fnb: [
-                        { desc: "Day 1 Dinner including drinks", price: 22779.00, subDesc: "Dinner for 300 people in the Ilissos room\n3-course menu\nStill waters, sparkling water and hot drinks\nWines: Selection of White and Red Wine\nBeer: Assorted local and international beers" },
-                        { desc: "Day 2 Dinner including drinks", price: 22779.00, subDesc: "Dinner for 300 people in the Ilissos room\n3-course menu\nStill waters, sparkling water and hot drinks\nWines: Selection of White and Red Wine\nBeer: Assorted local and international beers" },
-                        { desc: "Gala evening - Menu Option A", price: 28050.00, subDesc: "Appetizer & Canapé\nStarter\nMain dish\nDessert\nMignardises\nCoffee" },
-                        { desc: "F&B - Beverage package", price: 3300.00, subDesc: "Welcome drink & open Bar with wine, beer, soft drinks and water during the meal" },
-                        { desc: "F&B - Full Open Bar for 2 hours", price: 7983.00, subDesc: "Whisky, Vodka, Gin, Rum, Tequila" }
+                        { desc: "Dîner J1 incluant les boissons", price: 22779.00, subDesc: "Dîner (300 pax) en salle Ilissos\nMenu 3 plats\nEau plate/gazeuse, boissons chaudes\nVins : Blanc/Rouge\nBières : Sélection locale et internationale" },
+                        { desc: "Dîner J2 incluant les boissons", price: 22779.00, subDesc: "Dîner (300 pax) en salle Ilissos\nMenu 3 plats\nEau plate/gazeuse, boissons chaudes\nVins : Blanc/Rouge\nBières : Sélection locale et internationale" },
+                        { desc: "Soirée de Gala - Menu Option A", price: 28050.00, subDesc: "Apéritif & Canapés\nEntrée\nPlat principal\nDessert\nMignardises\nCafé" },
+                        { desc: "Forfait boissons (Gala)", price: 3300.00, subDesc: "Verre de bienvenue & Open Bar (vin, bière, softs, eau) pendant le repas" },
+                        { desc: "Open bar complet (2h)", price: 7983.00, subDesc: "Whisky, Vodka, Gin, Rhum, Tequila" }
                     ],
                     tech_staff: [
-                        { desc: "Technical production - Plenary & Breakout Rooms", price: 43543.50, subDesc: "Plenary room\nStage & Furniture\nBreakout rooms\nKick-Off" },
-                        { desc: "Gala evening - Technical package + DJ", price: 4400.00, subDesc: "Stage\nVideo & sound & Light\nTechnicians on site" },
-                        { desc: "Photographer & Videographer", price: 1452.00, subDesc: "Photo & Video Coverage\nDelivery of 2-3 min clip" },
-                        { desc: "Animation - Welcome Hostess + cloakroom", price: 1430.00 },
-                        { desc: "Animation - Key Royale Music duet", price: 1900.00 },
-                        { desc: "Staff - Security", price: 600.00, subDesc: "3 security officers" }
+                        { desc: "Production technique - Plénière & Sous-commissions", price: 43543.50, subDesc: "Salle plénière\nScène & Mobilier\nSalles de sous-commission\nKick-Off" },
+                        { desc: "Soirée de Gala - Package technique + DJ", price: 4400.00, subDesc: "Scène\nVidéo, son & lumières\nTechniciens sur place" },
+                        { desc: "Photographe & Vidéaste", price: 1452.00, subDesc: "Couverture photo & vidéo\nLivraison d'un clip de 2-3 min" },
+                        { desc: "Animation - Hôtesses d'accueil + Vestiaire", price: 1430.00 },
+                        { desc: "Animation - Duo musical Key Royale", price: 1900.00 },
+                        { desc: "Staff - Sécurité", price: 600.00, subDesc: "3 agents de sécurité" }
                     ],
                     scenography: [
-                        { desc: "Photocall in the hotel", price: 396.00, subDesc: "3mx2m" },
-                        { desc: "Signage", price: 720.50, subDesc: "10 posters A1\n2 Roll ups" },
-                        { desc: "Photocall for the gala dinner", price: 396.00, subDesc: "3mx2m" }
+                        { desc: "Photocall à l'hôtel", price: 396.00, subDesc: "3mx2m" },
+                        { desc: "Signalétique", price: 720.50, subDesc: "10 posters A1\n2 Roll-ups" },
+                        { desc: "Photocall pour le dîner de Gala", price: 396.00, subDesc: "3mx2m" }
                     ],
                     project_team: [
-                        { desc: "4 weevers on site", price: 16400.00 },
-                        { desc: "VHR + Catering + Rooms + Flights", price: 3531.60 },
-                        { desc: "Resilience tax for climate change", price: 80.00 }
+                        { desc: "4 Weevers sur place", price: 16400.00 },
+                        { desc: "VHR + Repas + Hébergement + Vols", price: 3531.60 },
+                        { desc: "Taxe de séjour (Résilience climatique)", price: 80.00 }
                     ],
                     other: [
-                        { desc: "Goodies - Calendar to plant", price: 1080.00 },
-                        { desc: "Gala evening - Transport to venue", price: 2442.00, subDesc: "6 bus x 50 seats" },
+                        { desc: "Goodies - Calendrier à planter", price: 1080.00 },
+                        { desc: "Soirée de Gala - Transport vers le lieu", price: 2442.00, subDesc: "6 bus x 50 places" },
                         { desc: "Photobooth", price: 660.00 },
-                        { desc: "15 Customized awards", price: 466.20 },
+                        { desc: "15 Trophées personnalisés", price: 466.20 },
                         { desc: "Team building - Greek Quest", price: 17050.00 },
-                        { desc: "Gift for the winning team", price: 247.50, subDesc: "Organik Greek olive oil soaps" }
+                        { desc: "Cadeaux de l'équipe gagnante", price: 247.50, subDesc: "Savons bio à l'huile d'olive grecque" }
                     ]
                 }
             },
             malta: {
                 id: 'malta',
-                name: "Malta",
+                name: "Malte",
                 totalTTC: 487354.88 * 1.2,
                 totalHT: 487354.88,
                 honorairesHT: 47870.78,
@@ -145,62 +144,62 @@
                 },
                 details: {
                     venue: [
-                        { desc: "Hotel Rooms (Single Rooms)", price: 217290.00, subDesc: "Superior room\nBreakfast included" },
-                        { desc: "Eco Tax", price: 2250.00 },
-                        { desc: "Plenary Room rental fees", price: 1334.75, subDesc: "Set-up and installation" },
-                        { desc: "Delegates Day Rates", price: 80088.00, subDesc: "DDR Package Full day" },
-                        { desc: "Breakout Rooms - 2nd floor", price: 1779.68, subDesc: "3 breakout rooms" },
-                        { desc: "Breakout Rooms - 7th floor", price: 2135.60, subDesc: "3 breakout rooms" },
-                        { desc: "Gala Evening Venue - Montekristo Estate", price: 3542.37, subDesc: "The Renaissance Hall" }
+                        { desc: "Chambres d'hôtel (Single)", price: 217290.00, subDesc: "Chambres supérieures\nPetit-déjeuner inclus" },
+                        { desc: "Éco-taxe", price: 2250.00 },
+                        { desc: "Location salle plénière", price: 1334.75, subDesc: "Mise en place et installation" },
+                        { desc: "Forfait Journée d'Étude", price: 80088.00, subDesc: "Forfait journée complète" },
+                        { desc: "Salles de sous-commission - 2ème étage", price: 1779.68, subDesc: "3 salles de sous-commission" },
+                        { desc: "Salles de sous-commission - 7ème étage", price: 2135.60, subDesc: "3 salles de sous-commission" },
+                        { desc: "Lieu de la Soirée de Gala - Montekristo Estate", price: 3542.37, subDesc: "The Renaissance Hall" }
                     ],
                     fnb: [
-                        { desc: "Day 1 Welcome reception", price: 8898.00, subDesc: "Various culinary stations" },
-                        { desc: "Day 1 Beverage package", price: 5073.00 },
-                        { desc: "Day 2 Dinner set Menu", price: 12075.00 },
-                        { desc: "Day 2 Beverage package", price: 5073.00 },
-                        { desc: "Gala Evening - 4 courses Gala Menu", price: 20976.00 },
-                        { desc: "F&B - Welcome drink Prosecco", price: 1398.00 },
-                        { desc: "F&B - 4h Open Bar", price: 3357.00 }
+                        { desc: "Réception de bienvenue J1", price: 8898.00, subDesc: "Multiples stands culinaires" },
+                        { desc: "Forfait boissons J1", price: 5073.00 },
+                        { desc: "Dîner J2 - Menu servi", price: 12075.00 },
+                        { desc: "Forfait boissons J2", price: 5073.00 },
+                        { desc: "Soirée de Gala - Menu de Gala (4 plats)", price: 20976.00 },
+                        { desc: "Verre d'accueil (Prosecco)", price: 1398.00 },
+                        { desc: "Open Bar (4h)", price: 3357.00 }
                     ],
                     tech_staff: [
-                        { desc: "Technical production", price: 19065.00, subDesc: "Plenary & Breakout rooms" },
-                        { desc: "Scenography - Plenary Room", price: 7796.25, subDesc: "Panelled Shard Backdrop + Logo signage" },
-                        { desc: "Interpretation via IA - Acolad.", price: 2629.00 },
-                        { desc: "Gala Evening - Staff", price: 1072.50, subDesc: "Hostess & Security" },
-                        { desc: "Technique + DJ", price: 8211.50, subDesc: "Awards ceremony technique" },
-                        { desc: "Photographer & Videographer", price: 1452.00, subDesc: "Photo & Video Coverage" }
+                        { desc: "Production technique", price: 19065.00, subDesc: "Salle plénière & Sous-commissions" },
+                        { desc: "Scénographie - Salle plénière", price: 7796.25, subDesc: "Fond de scène (Panelled Shard Backdrop) + Signalétique logo" },
+                        { desc: "Traduction simultanée via IA (Acolad)", price: 2629.00 },
+                        { desc: "Soirée de Gala - Staff", price: 1072.50, subDesc: "Hôtesses & Sécurité" },
+                        { desc: "Technique + DJ", price: 8211.50, subDesc: "Technique pour la cérémonie de remise des prix" },
+                        { desc: "Photographe & Vidéaste", price: 1452.00, subDesc: "Couverture photo & vidéo" }
                     ],
                     scenography: [
-                        { desc: "Photocall in the hotel", price: 396.00, subDesc: "3mx2m" },
-                        { desc: "Signage", price: 720.50, subDesc: "10 posters A1\n2 Roll ups" },
-                        { desc: "Gala evening Photocall", price: 396.00, subDesc: "3mx2m" }
+                        { desc: "Photocall à l'hôtel", price: 396.00, subDesc: "3mx2m" },
+                        { desc: "Signalétique", price: 720.50, subDesc: "10 posters A1\n2 Roll-ups" },
+                        { desc: "Photocall soirée de Gala", price: 396.00, subDesc: "3mx2m" }
                     ],
                     project_team: [
-                        { desc: "4 weevers on site", price: 16400.00 },
-                        { desc: "VHR + Catering + Rooms + Flights", price: 3446.00 },
-                        { desc: "Eco Tax", price: 30.00 }
+                        { desc: "4 Weevers sur place", price: 16400.00 },
+                        { desc: "VHR + Repas + Hébergement + Vols", price: 3446.00 },
+                        { desc: "Éco-taxe", price: 30.00 }
                     ],
                     other: [
-                        { desc: "Goodies - Calendar to plant", price: 1080.00 },
-                        { desc: "Gala evening Transport", price: 2000.00, subDesc: "6 bus x 53 seats" },
-                        { desc: "Animation - Welcome Knighting theme", price: 918.50 },
-                        { desc: "Animation - Maltese Folklore Dancers", price: 390.50 },
-                        { desc: "Photobooth - Vintage Retro Booth", price: 764.50 },
-                        { desc: "15 Customized awards", price: 466.20 },
-                        { desc: "Team Building - Build a Hamper", price: 6740.00 },
-                        { desc: "Gift for the winning team", price: 239.25, subDesc: "Pack Extra virgin Olive oil and vinegar" }
+                        { desc: "Goodies - Calendrier à planter", price: 1080.00 },
+                        { desc: "Soirée de Gala - Transport", price: 2000.00, subDesc: "6 bus x 53 places" },
+                        { desc: "Animation - Thématique Chevalerie", price: 918.50 },
+                        { desc: "Animation - Danseurs Folkloriques Maltais", price: 390.50 },
+                        { desc: "Photobooth - Borne Rétro Vintage", price: 764.50 },
+                        { desc: "15 Trophées personnalisés", price: 466.20 },
+                        { desc: "Team Building - Création de panier garni", price: 6740.00 },
+                        { desc: "Cadeaux de l'équipe gagnante", price: 239.25, subDesc: "Coffret huile d'olive vierge extra et vinaigre" }
                     ]
                 }
             }
         };
 
         const categoryLabels = {
-            venue: "Venue",
-            fnb: "Food & Beverages",
-            tech_staff: "Tech & Staff",
-            scenography: "Scenography/Furniture",
-            project_team: "Project Team",
-            other: "Other"
+            venue: "Hôtellerie / Lieu",
+            fnb: "Restauration",
+            tech_staff: "Technique & Staff",
+            scenography: "Scénographie",
+            project_team: "Équipe Projet",
+            other: "Autres / Loisirs"
         };
 
         const categoryColors = {
